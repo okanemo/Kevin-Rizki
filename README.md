@@ -8,7 +8,7 @@ This projects provide:
 ## How to use
 1. Clone this repo
 2. Install PostgreSQL in case you don't have it
-3. Run `./bootstrap.hs` with the name of your project like `./bootstrap.sh awesome_laboratories`
+3. Run `./bootstrap.sh` with the name of your project like `./bootstrap.sh awesome_laboratories`
 4. `rails s`
 5. You can now try your REST services.
 
