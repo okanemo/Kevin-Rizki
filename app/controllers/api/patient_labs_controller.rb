@@ -9,9 +9,12 @@ class Api::PatientLabsController < ActionController::API
         
         if patient_lab.valid?
             render json: patient_lab, status: :created
-        else
+        elsif patient_lab.valid?(:blank)
             render json: {errors: patient_lab.errors.full_messages},
             status: :not_acceptable
+        else
+            render json: {errors: patient_lab.errors.full_messages},
+            status: :conflict
         end
             
     end
