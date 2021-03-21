@@ -8,9 +8,10 @@ This projects provide:
 ## How to use
 1. Clone this repo
 2. Install PostgreSQL in case you don't have it
-3. Run `./bootstrap.sh` with the name of your project like `./bootstrap.sh awesome_laboratories`
-4. `rails s`
-5. You can now try your REST services.
+3. Login to the 'postgres' user and run the Postgres shell. Create a new role `postgres= create role al_dev with createdb login password '12345678'`
+4. Run `./bootstrap.sh` with the name of your project like `./bootstrap.sh awesome_laboratories`
+5. `rails s`
+6. You can now try your REST services.
 
 ## Usage
 

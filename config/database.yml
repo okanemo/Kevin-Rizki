@@ -2,19 +2,23 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: 
-  password: 
-  host: localhost
-  port: 5432
+  username: al_dev 
+  password: 12345678
 
 development:
   <<: *default
   database: awesome_laboratories_development
+  host: localhost
+  port: 5432
 
 test:
   <<: *default
   database: awesome_laboratories_test
+  host: localhost
+  port: 5432
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL']
+  database: awesome_laboratories_production
+  username: awesome_laboratories
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
